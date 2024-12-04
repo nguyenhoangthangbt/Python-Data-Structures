@@ -36,6 +36,9 @@ class SLinkedList:
                 nextNode=tempNode.next
                 tempNode.next=newNode
                 newNode.next=nextNode
+                if tempNode==self.tail:
+                    self.tail==newNode
+
     
     def traverseSLL(self):
         if self.head==None:
@@ -97,10 +100,11 @@ class SLinkedList:
                 
 # main driver code
 sll=SLinkedList()
-sll.insertSSL(1,1)
-sll.insertSSL(2,1)
-sll.insertSSL(3,1)
-sll.insertSSL(4,1)
-sll.insertSSL(5,1)
-sll.insertSSL(6,1)
+# sll.insertSSL(1,1)
+sll.insertSSL(1,2)
+sll.insertSSL(3,3)
+sll.insertSSL(44,2)
+
+# sll.insertSSL(5,1)
+# sll.insertSSL(6,1)
 print([node.value for node in sll])
